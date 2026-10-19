@@ -40,22 +40,3 @@ jobs:
         generate_release_notes: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```[cite: 1]
-
----
-
-### 📍 Bước 4: Đẩy mã nguồn lên GitHub và Nghiệm thu kết quả
-
-#### 1. Đẩy file cấu hình và mã nguồn ban đầu lên nhánh `main`[cite: 1]
-Mở Terminal tại thư mục dự án và chạy các lệnh[cite: 1]:
-```bash
-git add .
-git commit -m "ci/cd: complete core lint-build-test pipeline and release automation workflow"
-git push origin main
-```[cite: 1]
-
-#### 2. Kích hoạt lệnh phát hành phiên bản (CD) với Git Tag[cite: 1]
-Tạo tag phiên bản và đẩy lên GitHub[cite: 1]:
-```bash
-git tag v1.0.0 -m "Phát hành phiên bản chính thức đầu tiên bản v1.0.0"
-git push origin v1.0.0
